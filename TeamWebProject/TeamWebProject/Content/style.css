@@ -26,6 +26,9 @@ p {
     .content:nth-child(n+2) {
     margin-top: 20px;
 }
+    .content:last-child {
+        margin-bottom: 10px;
+    }
 
 .container-fluid {
     padding: 0;
@@ -67,3 +70,66 @@ p {
     .light .color, .light.color {
         background-color: #E0F2F1;
     }
+
+/* Responsive Design */
+@media screen and (min-width: 600px) {
+    .wrapper {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+    #members .content {
+        float: left;
+        width: 50%;
+    }
+    #members .content {
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 760px;
+    }
+    .content:nth-child(n+2) {
+        margin-top: 0;
+    }
+
+    #intro {
+        height: 100vh;
+    }
+    #intro .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #members img {
+        width: 90%;
+        margin: 0 auto;
+        height: 150px;
+    }
+    #members .content {
+        width: 25%;
+    }
+
+    #process .content {
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 20px;
+        float: left;
+    }
+
+    #footer {
+        text-align: left;
+    }
+    #footer .content {
+        width: calc(100% / 3);
+    }
+
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+}
